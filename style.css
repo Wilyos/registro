@@ -1,0 +1,102 @@
+body
+{
+    background-image: url("images/fondo2.png");
+    margin: 0;
+}
+
+.indie-flower-regular {
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+.container
+{
+    margin:auto;
+    margin-top: 50px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    width: 500px;
+    height: 500px;
+    border-radius: 5px;
+    background-color: rgba(238, 245, 238, 0.041) ;
+    
+    
+}
+
+    
+h1, h2
+{
+    text-align: center;
+    color:#E6531C;
+}
+
+label
+{
+    color: #E6531C;
+    font-size: 20px;
+}
+
+input[type=text],input[type=password]
+{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+input[type=submit] {
+    width: 100%;
+    background-color: #EB603D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  
+  input[type=submit]:hover {
+    background-color:#E6531C;
+  }
+  a
+  {
+    color: #E6531C;
+  }
+  form
+  {
+    justify-items: center;
+    gap: 10px;
+  }
+  video
+  {
+    margin: auto;
+    
+  }
+
+  .containervid
+{
+    margin:auto;
+    margin-top: 10px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+video
+{
+  width: 100%;
+  height: auto;
+}
+
+  
