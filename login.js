@@ -27,23 +27,35 @@ function guardarRegistro(e)
     let contrasena = document.getElementById("password").value;
     let edad = document.getElementById("age").value;
     let email = document.getElementById("email").value;
+    let registros
 
     // Crear un objeto con los datos
     let registro = {
-        usuario: "user",
-        contrasena: 1234,
-        edad: 22,
-        email: "johnDoe@email.com"
+        usuario: "",
+        contrasena: "",
+        edad: "",
+        email: ""
     };
     
 
-    if (edad >= 18) {
+    if (edad >= 18)
+    {
         registro = {
             usuario: usuario,
             contrasena: contrasena,
             edad: edad,
             email: email
         };
+        // Obtener registros existentes o inicializar un array vacío
+        registros = JSON.parse(localStorage.getItem("registros")) || [];
+        // Agregar el nuevo registro
+        registros.push(registro);
+        
+        // Guardar de nuevo en Local Storage
+        localStorage.setItem("registros", JSON.stringify(registros));
+
+        console.log("Registro guardado:", registro);
+
     }
     else
     {
@@ -51,14 +63,7 @@ function guardarRegistro(e)
     }
     
 
-    // Obtener registros existentes o inicializar un array vacío
-    let registros = JSON.parse(localStorage.getItem("registros")) || [];
+   
     
-    // Agregar el nuevo registro
-    registros.push(registro);
-    
-    // Guardar de nuevo en Local Storage
-    localStorage.setItem("registros", JSON.stringify(registros));
 
-    console.log("Registro guardado:", registro);
 }
